@@ -1,0 +1,3 @@
+# 🤝 Contributing to ultimate-n8n-ai-workflows
+Thank you for your interest! 🚀
+...
