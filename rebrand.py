@@ -1,33 +1,26 @@
 import os
-import re
 
-def find_readme_files(tree_file):
+def find_readme_files(root_dir):
     readme_files = []
-    with open(tree_file, 'r') as f:
-        for line in f:
-            if 'README.md' in line:
-                # Use regex to find the path
-                match = re.search(r'(\./.+/README\.md)', line)
-                if match:
-                    readme_files.append(match.group(1))
+    for root, dirs, files in os.walk(root_dir):
+        if 'README.md' in files:
+            readme_files.append(os.path.join(root, 'README.md'))
     return readme_files
 
 def append_to_readme(file_path, content_to_append):
-    # Clean up the path by removing the leading './'
-    cleaned_path = file_path[2:]
-    if not os.path.exists(cleaned_path):
-        print(f"Error: {cleaned_path} not found.")
+    if not os.path.exists(file_path):
+        print(f"Error: {file_path} not found.")
         return
     try:
-        with open(cleaned_path, 'r+') as f:
+        with open(file_path, 'r+') as f:
             content = f.read()
             if content_to_append in content:
-                print(f"Branding content already exists in {cleaned_path}")
+                print(f"Branding content already exists in {file_path}")
                 return
             f.write(content_to_append)
-            print(f"Appended to {cleaned_path}")
+            print(f"Appended to {file_path}")
     except Exception as e:
-        print(f"An error occurred with {cleaned_path}: {e}")
+        print(f"An error occurred with {file_path}: {e}")
 
 if __name__ == '__main__':
     branding_content = """
@@ -88,8 +81,6 @@ This is the **exact system** powering the communities you can join below:
 * **Twitter:** [@leadgenjay](https://twitter.com/leadgenjay)
 """
     
-    readme_files = find_readme_files('file_tree.txt')
-    # also add the root README.md
-    readme_files.append('./README.md')
+    readme_files = find_readme_files('.')
     for readme_file in readme_files:
         append_to_readme(readme_file, branding_content)
