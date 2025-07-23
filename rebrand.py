@@ -1,31 +1,33 @@
 import os
+import re
 
 def find_readme_files(tree_file):
     readme_files = []
     with open(tree_file, 'r') as f:
         for line in f:
             if 'README.md' in line:
-                try:
-                    # Find the start of the path and extract it
-                    path_start_index = line.find('./')
-                    if path_start_index != -1:
-                        path = line[path_start_index:].strip()
-                        readme_files.append(path)
-                except ValueError:
-                    pass  # Or handle lines without './'
+                # Use regex to find the path
+                match = re.search(r'(\./.+/README\.md)', line)
+                if match:
+                    readme_files.append(match.group(1))
     return readme_files
 
 def append_to_readme(file_path, content_to_append):
-    # Clean up the path
-    file_path = file_path.lstrip('./')
-    if not os.path.exists(file_path):
-        print(f"Error: {file_path} not found.")
+    # Clean up the path by removing the leading './'
+    cleaned_path = file_path[2:]
+    if not os.path.exists(cleaned_path):
+        print(f"Error: {cleaned_path} not found.")
         return
     try:
-        with open(file_path, 'a') as f:
+        with open(cleaned_path, 'r+') as f:
+            content = f.read()
+            if content_to_append in content:
+                print(f"Branding content already exists in {cleaned_path}")
+                return
             f.write(content_to_append)
+            print(f"Appended to {cleaned_path}")
     except Exception as e:
-        print(f"An error occurred with {file_path}: {e}")
+        print(f"An error occurred with {cleaned_path}: {e}")
 
 if __name__ == '__main__':
     branding_content = """
@@ -87,6 +89,7 @@ This is the **exact system** powering the communities you can join below:
 """
     
     readme_files = find_readme_files('file_tree.txt')
+    # also add the root README.md
+    readme_files.append('./README.md')
     for readme_file in readme_files:
         append_to_readme(readme_file, branding_content)
-        print(f"Appended to {readme_file}")
