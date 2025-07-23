@@ -1,0 +1,61 @@
+./FILES_TO_DELETE.md
+./changelog.md
+./workflows/ai-agents/data-automation/README.md
+./workflows/ai-agents/document-parsing/README.md
+./workflows/data-automation/README.md
+./workflows/document-parsing/README.md
+./docs/architecture.md
+./docs/how-to-import.md
+./docs/prompt-engineering-tips.md
+./README.md
+./roadmap.md
+./CONTRIBUTING.md
+./PLAN.md
+./New Workflow/1132-trigger-a-build-in-travis-ci-when-code-changes-are-push-to-a-github-repo/README.md
+./New Workflow/875-send-tweets-every-minute-to-mattermost/README.md
+./New Workflow/818-insert-and-update-data-in-airtable/README.md
+./New Workflow/987-create-asana-ticket-from-terminal-bash-dash/README.md
+./New Workflow/1274-assign-issues-to-interested-contributors/README.md
+./New Workflow/824-create-a-table-and-insert-and-update-data-in-the-table-in-snowflake/README.md
+./New Workflow/823-n8n-workflow-backup-management-with-dropbox-and-airtable/README.md
+./New Workflow/900-add-a-datapoint-to-beeminder-on-strava-activity-update/README.md
+./New Workflow/888-get-data-from-hacker-news-and-send-to-airtable-or-via-sms/README.md
+./New Workflow/1041-create-update-and-get-an-object-from-bubble/README.md
+./New Workflow/1048-create-update-and-get-an-item-from-webflow/README.md
+./New Workflow/835-get-company-data-and-store-it-in-airtable/README.md
+./New Workflow/1053-git-backup-of-workflows-and-credentials/README.md
+./New Workflow/853-weekly-coffee-chat-mattermost-version/README.md
+./New Workflow/1243-avoid-rate-limiting-by-batching-http-requests/README.md
+./New Workflow/1160-merge-data-for-multiple-executions/README.md
+./New Workflow/869-find-a-new-book-recommendations/README.md
+./New Workflow/1130-add-a-check-condition-for-a-loop-in-n8n/README.md
+./New Workflow/844-send-updates-about-the-position-of-the-iss-every-minute-to-a-topic-in-rabbitmq/README.md
+./New Workflow/880-receive-updates-of-the-position-of-the-iss-every-minute/README.md
+./New Workflow/995-split-in-batches-node-noitemsleft-example/README.md
+./New Workflow/934-insert-and-retrieve-data-from-a-table-in-stackby/README.md
+./New Workflow/837-track-changes-of-product-prices/README.md
+./New Workflow/847-create-update-and-get-a-product-from-woocommerce/README.md
+./New Workflow/930-create-update-and-get-a-post-via-discourse/README.md
+./New Workflow/1254-deploy-site-when-new-content-gets-added/README.md
+./New Workflow/996-split-in-batches-node-currentrunindex-example/README.md
+./New Workflow/879-access-data-from-bubble-application/README.md
+./New Workflow/858-create-a-website-screenshot-and-send-via-telegram-channel/README.md
+./New Workflow/870-send-an-sms-to-a-number-whenever-you-go-out/README.md
+./New Workflow/1073-scrape-and-store-data-from-multiple-website-pages/README.md
+./New Workflow/1111-create-transcription-jobs-using-aws-transcribe/README.md
+./New Workflow/1093-build-a-self-hosted-url-shortener-with-a-dashboard/README.md
+./New Workflow/828-send-the-astronomy-picture-of-the-day-daily-to-a-telegram-channel/README.md
+./New Workflow/817-save-your-workflows-into-a-github-repository/README.md
+./New Workflow/1115-manage-changes-using-the-git-node/README.md
+./New Workflow/1114-create-update-and-get-a-task-in-microsoft-to-do/README.md
+./New Workflow/867-create-add-an-attachment-and-send-a-draft-using-microsoft-outlook/README.md
+./New Workflow/825-create-update-and-get-a-post-in-ghost/README.md
+./New Workflow/809-get-the-job-details-using-the-cortex-node/README.md
+./New Workflow/1222-backup-workflows-to-github/README.md
+./New Workflow/1110-add-articles-to-a-notion-list-by-accessing-a-discord-slash-command/README.md
+./New Workflow/1074-add-liked-songs-to-a-spotify-monthly-playlist/README.md
+./New Workflow/965-analyze-feedback-using-aws-comprehend-and-send-it-to-a-mattermost-channel/README.md
+./New Workflow/806-get-synonyms-of-a-german-word/README.md
+./New Workflow/1047-send-location-updates-of-the-iss-every-minute-to-a-queue-in-aws-sqs/README.md
+./New Workflow/935-check-for-preview-for-a-link/README.md
+./New Workflow/959-create-a-collection-and-create-update-and-get-a-bookmark-in-raindrop/README.md

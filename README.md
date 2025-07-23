@@ -1,11 +1,5 @@
 # 🤖 Ultimate n8n AI Workflows
 
-[![Stars](https://img.shields.io/github/stars/oxbshw/ultimate-n8n-ai-workflows?style=social)](https://github.com/oxbshw/ultimate-n8n-ai-workflows/stargazers)
-[![Forks](https://img.shields.io/github/forks/oxbshw/ultimate-n8n-ai-workflows?style=social)](https://github.com/oxbshw/ultimate-n8n-ai-workflows/network/members)
-[![Workflows](https://img.shields.io/badge/Workflows-3,400%2B-blue?style=flat-square)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/oxbshw/ultimate-n8n-ai-workflows/blob/main/LICENSE)
-[![Issues](https://img.shields.io/github/issues/oxbshw/ultimate-n8n-ai-workflows)](https://github.com/oxbshw/ultimate-n8n-ai-workflows/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/oxbshw/ultimate-n8n-ai-workflows)](https://github.com/oxbshw/ultimate-n8n-ai-workflows)
 
 > **The definitive AI workflow library for n8n:** 3,400+ modular, production‑grade automations—plug-and-play for any LLM, integration, or use case.
 
@@ -63,7 +57,7 @@ ultimate-n8n-ai-workflows/
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/oxbshw/ultimate-n8n-ai-workflows.git
+   git clone https://github.com/ultimate-n8n-ai-workflows.git
    cd ultimate-n8n-ai-workflows
    ```
 
@@ -126,14 +120,14 @@ Read [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details.
 
 Distributed under the **MIT License**.
 
-See [LICENSE](https://github.com/oxbshw/ultimate-n8n-ai-workflows/blob/main/LICENSE) for full terms.
+See [LICENSE](https://github.com/ultimate-n8n-ai-workflows/blob/main/LICENSE) for full terms.
 
 ---
 
 ## 📬 Stay Connected
 
 * 🌐 Portfolio: [sayedev.framer.ai](https://sayedev.framer.ai)
-* 💻 GitHub: [@oxbshw](https://github.com/oxbshw)
+* 💻 GitHub: [@n8n-io](https://github.com/oxbshw)
 * 🐦 X (Twitter): [@Sayedevv](https://x.com/Sayedevv)
 * 🌌 Bluesky: [sayedev.bsky.social](https://bsky.app/profile/sayedev.bsky.social)
 
