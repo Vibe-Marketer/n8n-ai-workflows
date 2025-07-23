@@ -1,15 +1,16 @@
-import re
+import os
 
-def find_markdown_files(input_file, output_file):
-    with open(input_file, 'r') as f:
-        content = f.read()
+def find_readme_files(tree_file):
+    readme_files = []
+    with open(tree_file, 'r') as f:
+        for line in f:
+            if 'README.md' in line:
+                # Extract the path from the line
+                path = line.split(' ')[-1].strip()
+                readme_files.append(path)
+    return readme_files
 
-    # Find all paths ending with .md
-    md_files = re.findall(r'\./.*\.md', content)
-
-    with open(output_file, 'w') as f:
-        for file in md_files:
-            f.write(file + '\n')
-
-if __name__ == "__main__":
-    find_markdown_files('file_tree.txt', 'markdown_files.txt')
+if __name__ == '__main__':
+    readme_files = find_readme_files('file_tree.txt')
+    for readme in readme_files:
+        print(readme)

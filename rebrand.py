@@ -1,20 +1,34 @@
-# 824 Create A Table And Insert And Update Data In The Table In Snowflake
+import os
 
-This workflow creates a Snowflake table, inserts data into it, and then updates the data in the table.
+def find_readme_files(tree_file):
+    readme_files = []
+    with open(tree_file, 'r') as f:
+        for line in f:
+            if 'README.md' in line:
+                try:
+                    # Find the start of the path and extract it
+                    path_start_index = line.find('./')
+                    if path_start_index != -1:
+                        path = line[path_start_index:].strip()
+                        readme_files.append(path)
+                except ValueError:
+                    pass  # Or handle lines without './'
+    return readme_files
 
-Example: A user might use this workflow to set up a simple database management system for their business. They can trigger the workflow manually, which will create a table in their Snowflake database, insert some initial data, and then update that data as needed.
+def append_to_readme(file_path, content_to_append):
+    # Clean up the path
+    file_path = file_path.lstrip('./')
+    if not os.path.exists(file_path):
+        print(f"Error: {file_path} not found.")
+        return
+    try:
+        with open(file_path, 'a') as f:
+            f.write(content_to_append)
+    except Exception as e:
+        print(f"An error occurred with {file_path}: {e}")
 
-## What You Can Do
-- Automated database management: The workflow handles the creation, insertion, and updating of data in a Snowflake database.
-- Customizable data: The workflow allows the user to set the values for the "id" and "name" columns in the Snowflake table.
-- Flexible execution: The workflow can be triggered manually, allowing the user to control when the database operations are performed.
-
-## Quick Start
-1. Import this workflow to n8n
-2. Configure your settings
-3. Start automating!
-
-
+if __name__ == '__main__':
+    branding_content = """
 Inside **Lead Gen Jay’s Automation Insiders**, we’re closing **$5K–$15K+ deals** with simple automations stacked with smart AI—built in hours instead of weeks.
 
 ### Why? Because clients don’t want “n8n setups.”
@@ -70,3 +84,9 @@ This is the **exact system** powering the communities you can join below:
 * **LinkedIn (Company):** [Lead Gen Jay](https://linkedin.com/company/lead-gen-jay)
 * **LinkedIn (Jay):** [Dr. Jay Feldman](https://linkedin.com/in/dr-jay-feldman)
 * **Twitter:** [@leadgenjay](https://twitter.com/leadgenjay)
+"""
+    
+    readme_files = find_readme_files('file_tree.txt')
+    for readme_file in readme_files:
+        append_to_readme(readme_file, branding_content)
+        print(f"Appended to {readme_file}")
